@@ -1,39 +1,39 @@
 # 30 tips for FrontEnd Developer
-#### В данном репозитории собраны 30 советов для новичков в FrontEnd сфере, которые возможно сделают ваш код чище и приятнее. Все правила написаны понятным языком, чтобы даже самый зелёный новичок всё понял :)
-## Правила введения кода для HTML
-1. В заголовке тега article должен использоваться тег h1. [Его можно использовать сколько угодно раз, как и все <h> теги.](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824) Тег h2 нужен для заголовков или подзаголовков. Теги h3 и h4 нужны для названия рубрик и тд в sidebar. Теги h5 и h6 нужны для мелких элементов страницы, которые нужно отделить от остального текста.
-2. Не указывать протокол "http:" в ссылках на внешние элементы.
-3. Теги details и summary используются для разметки сворачиваемого раздела содержимого. summary Тег используется для выделения заголовка раздела, а details тег используется для выделения самого содержимого.
-4. Тег mark используется для выделения текста, который был выделен по какой-либо причине. 
-5. Теги div и span не являются семантическими тегами, поэтому нужно стараться их не использовать.
-## Правила введения кода для CSS
-6. Не указывать атрибут "type" при подключении стилей и скриптов.
-7. Надо избегать теги в виде селекторов.
-8. По возможности писать сокращённые записи свойств (например, вместо padding-left, padding-top и тд, писать просто padding).
-9. Не указывать единицы измерений для нулевых значений (например, вместо margin: 0px, нужно писать margin: 0).
-10. Не ставить 0 в целой части в значениях между -1 и 1 (т.е, вместо, например 0.5em, писать .5em).
-11. Не использовать кавычки в ссылках.
-12. Сортировать объявления в CSS по алфавиту.
-13. Использовать [BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) для CSS.
-## Правила введения кода для HTML и CSS
-14. Всегда использовать 2 пробела для отступов.
-15. По возможности пояснять свой код комментариями.
-## ACCESSIBILITY:
-16. Сделать элементы видео [доступными](https://web.dev/media-accessibility/) для людей с ограниченными возможностями.
-17. Для фокуса на определённые элементы существует атрибут [tabindex](https://www.internet-technologies.ru/articles/kak-i-kogda-ispolzovat-atribut-tabindex.html#header-45156-1). Он полезен, когда нужно обеспечить доступность для пользователей, использующих только клавиатуру.
-18. Для пользователей экранной лупы есть 3 правила для контента, который появляется при наведении:
-      1. Контент можно отклонить без перемещения фокуса или курсора (например, с помощью Esc).
-      2. Курсор можно перевести с кнопки на появляющийся контент и при этом он не исчезает.
-      3. Появляющийся дополнительный контент остаётся видимым, пока фокус или курсор не убрали с кнопки или дополнительного контента либо пока пользователь не отклонит контент клавишей Esc. 
-19. Атрибут Aria-label помогает присвоить элементу заголовок, который видим исключительно программам чтения с экрана. Атрибут Aria-labelledby позволяет сделать так, чтобы скринридер при фокусе на элемент читал другое видимое название или заголовок. 
-20. Aria-describedby предоставляет дополнительную информацию для скринридера к имеющемуся видимому заголовку.
-21. Aria-disabled позволяет включить неактивный элемент в порядок следования фокуса. Значит, для пользователя со скринридера этот элемент как бы не будет существовать.
-22. Роль "alertdialog" позволяет вспомогательным технологиям и браузеру распознать выскакивающие окно предупреждения или сообщения об ошибке и озвучить его появление специальным образом, например проиграв системный звук предупреждения.
-23. Фокус может находиться только на интерактивных элементах, т.е. кнопках, ссылках, чекбоксах и т.д. Порядок следования фокуса должен соответствовать визуальному или логическому порядку расположения интерактивных элементов на экране. Неактивные элементы управления не фокусируются.  
-24. Чтобы посмотреть то, как элемент должен ввести себя при работе с клавиатуры стоит посмотреть раздел [‘Design Patterns and Widgets’](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex).
-25. Стоит указывать основной язык каждой страницы, используя, например, lang атрибут в 'html lang="en"'.Нужно использовать lang атрибут для определенных элементов, когда язык элемента отличается от остальной части страницы.
-26. Роли WAI-ARIA могут придать дополнительный смысл коду, например, используя role="search" для определения функциональности поиска.
-27. Нужно предоставить четкие инструкции, сообщения об ошибках и уведомления, чтобы помочь пользователям заполнять формы на вашем сайте.
-28. Стоит убедиться, что порядок элементов в коде соответствует логическому порядку представленной информации. Один из способов проверить это - удалить стиль CSS и убедиться, что порядок содержимого имеет смысл.
-29. Стоит использовать отзывчиво-адаптивный дизайн сайта.
-30. Используйте WAI-ARIA для предоставления информации о функциях и состоянии пользовательских виджетов, таких как аккордеоны и кнопки, изготовленные на заказ. Например, role="navigation" и aria-expanded="true" (устанавливается для элемента, чтобы указать, развернут элемент управления или свернут, и отображаются ли контролируемые элементы или скрыты).
+#### This repository contains 30 tips for FrontEnd developers that will make your code cleaner and nicer. I have tried to write all these tips in clear language, so that even the greenest beginner would understand everything :)
+## Rules of introducing code for HTML
+1. In the title of article tag, the h1 tag should be used. [This can be used as many times as you wish, like all h tags.](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824) The h2 tag is used for titles or subheadings. The h3 and h4 tags are used for names of sidebars, rubrics and so on. The h5 and h6 tags are for small elements of the page, which need to be separated from the rest of the text.
+2. Do not specify "http:" in links to external elements.
+3. details and summary tags are used to mark up a collapsible section of content. The summary tag is used to highlight the section title, and the details tag is used to highlight the content itself.
+4 The mark tag is used to highlight text that was highlighted for a reason. 
+5. The div and span tags are not semantic tags, so you should try not to use them.
+## Code rules for CSS
+6. Do not specify the "type" attribute when plugging in styles and scripts.
+7. You should avoid selectors that are or include html tags.
+8. If possible write abbreviated property entries (for example, instead of padding-left, padding-top, etc., write the values in padding).
+9. Not to specify a unit for null values (for example, instead of margin: 0px, write margin: 0).
+10. Not to put 0 in integer part in values between -1 and 1 (i.e. instead of, for example, 0.5em, write .5em).
+11. do not use inverted commas in links.
+12. Sort ads in CSS alphabetically.
+13. Try to use [BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) for CSS.
+## Code rules for HTML and CSS
+14. Always use 2 spaces for indentation.
+15. If possible, explain your code with comments.
+## Accessibility:
+16. Make video elements [accessible](https://web.dev/media-accessibility/) for people with disabilities.
+17. There is an attribute [tabindex](https://www.internet-technologies.ru/articles/kak-i-kogda-ispolzovat-atribut-tabindex.html#header-45156-1) to focus on certain elements. It is useful when you want to ensure accessibility for keyboard-only users.
+18. For screen magnifier users, there are 3 rules for the content that appears when hovering:
+      1. Content can be dismissed without moving the focus or cursor (e.g. using Esc).
+      2. The cursor can be moved from the button to the content that appears and it does not disappear.
+      3. Appearing additional content remains visible until the focus or cursor is removed from the button or additional content or until the user dismisses the content with the Esc key. 
+19. The Aria-label attribute helps to assign a title to the element, which is visible only to the screen reader. The Aria-labelledby attribute helps to make the screen reader read another visible name or title when focusing on the element. 
+20. Aria-describedby provides additional information for the screen reader to the existing visible title.
+21. Aria-disabled allows an inactive element to be included in the focus order. This means that for the screen reader user, the element will sort of not exist.
+22. The "alertdialog" role allows assistive technologies and the browser to recognize a pop-up warning or error message window and sound its appearance in a special way, e.g. by playing a system warning sound.
+23. The focus can only be on interactive elements, i.e. buttons, links, checkboxes, etc. The order of the focus must follow the visual or logical order of the interactive elements on the screen. Inactive controls are not focused.  
+24. To see how an element should enter itself when using the keyboard it is worth looking at ['Design Patterns and Widgets'](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex).
+25. It is worth specifying the primary language of each page using e.g. the lang attribute in html lang="en". You should use the lang attribute for certain elements when the language of the element is different from the rest of the page.
+26. WAI-ARIA roles can give extra meaning to the code, e.g. using role="search" to define the search functionality.
+27. Need to provide clear instructions, error messages and notifications to help users complete forms on your site.
+28. It's worth making sure that the order of the elements in the code matches the logical order of the information provided. One way to check this is to remove the CSS style and make sure the order of the content makes sense.
+29. It's worth using responsive-adaptive website design.
+30. Use WAI-ARIA to provide function and status information for custom widgets such as accordion and custom buttons. For example, role="navigation" and aria-expanded="true" (aria-expanded is set for an element to indicate whether the control is expanded or collapsed, and whether controlled elements are displayed or hidden).
