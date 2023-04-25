@@ -4,10 +4,10 @@
 1. In the title of article tag, the h1 tag should be used. [This can be used as many times as you wish, like all h tags.](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824) The h2 tag is used for titles or subheadings. The h3 and h4 tags are used for names of sidebars, rubrics and so on. The h5 and h6 tags are for small elements of the page, which need to be separated from the rest of the text.
 2. Do not specify "http:" in links to external elements.
 3. details and summary tags are used to mark up a collapsible section of content. The summary tag is used to highlight the section title, and the details tag is used to highlight the content itself.
-4 The mark tag is used to highlight text that was highlighted for a reason. 
+4. The mark tag is used to highlight text that was highlighted for a reason. 
 5. The div and span tags are not semantic tags, so you should try not to use them.
-## Code rules for CSS
 6. Do not specify the "type" attribute when plugging in styles and scripts.
+## Code rules for CSS
 7. You should avoid selectors that are or include html tags.
 8. If possible write abbreviated property entries (for example, instead of padding-left, padding-top, etc., write the values in padding).
 9. Not to specify a unit for null values (for example, instead of margin: 0px, write margin: 0).
